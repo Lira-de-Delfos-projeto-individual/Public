@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lira de Delfos</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <section id="entrada-site">
+        <h2>Você tem interesse em música? já pensou em um site que te ajuda a aprender a tocar?</h2>
+        <button id="botao-sim" onclick="entrar()">Sim</button>
+        <button id="botao-nao" onmouseover="moverBotao()">Não</button>
+    </section>
+
+    <script>
+        function entrar() {
+            window.location.href = 'introducao.html'; // Redireciona para a introdução do site
+        }
+
+        function moverBotao() {
+            const botaoNao = document.getElementById('botao-nao');
+            const larguraMax = window.innerWidth - botaoNao.offsetWidth;
+            const alturaMax = window.innerHeight - botaoNao.offsetHeight;
+
+            const novaPosX = Math.floor(Math.random() * larguraMax);
+            const novaPosY = Math.floor(Math.random() * alturaMax);
+
+            botaoNao.style.position = 'absolute';
+            botaoNao.style.left = `${novaPosX}px`;
+            botaoNao.style.top = `${novaPosY}px`;
+        }
+    </script>
+</body>
+</html>

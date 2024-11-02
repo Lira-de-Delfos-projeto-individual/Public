@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style/styleCadastro.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo da Escola" id="logo">
+            <h1>Lira de Delfos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="introducao.html">Home</a></li>
+                <li><a href="intrducao.html#cursos">Cursos</a></li>
+                <li><a href="introducao.html#apostila">Apostila de Teoria Musical</a></li>
+                <li><a href="introducao.html#sobre">Sobre Nós</a></li>
+                <li><a href="login.html" class="button">Login</a></li>
+                <li><a href="cadastro.html" class="button">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <center><h2>Cadastro</h2></center>
+    
+    <section id="cadastro">
+        <form id="cadastroForm">
+            <h2>Cadastro</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required placeholder="Digite seu nome">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required placeholder="Digite seu e-mail">
+    
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required placeholder="Digite sua senha">
+
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" placeholder="(XX) XXXX-XXXX">
+            
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" placeholder="Digite seu endereço">
+
+            <button type="submit">Cadastrar</button>
+            <p>Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
+        </form>
+
+        <section id="fale-conosco">
+            <h2>Fale Conosco</h2>
+            <div class="contato-container">
+                <div class="contato-item">
+                    <h3>Email</h3>
+                    <p>contato@exemplo.com</p>
+                </div>
+                <div class="contato-item">
+                    <h3>Telefone</h3>
+                    <p>(11) 1234-5678</p>
+                </div>
+                <div class="contato-item">
+                    <h3>Endereço</h3>
+                    <p>Rua Exemplo, 123 - São Paulo, SP</p>
+                </div>
+            </div>
+            <div class="redes-sociais">
+                <h3>Siga-nos</h3>
+                <div class="footer-section">
+                    <h2>Nossas Redes</h2>
+                    <ul>
+                        <li><a href="https://facebook.com/liradedelfos" target="_blank">Facebook</a></li>
+                        <li><a href="https://instagram.com/liradedelfos" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/liradedelfos" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="footer-section">
+        <p>&copy; 2024 Lira de Delfos. Todos os direitos reservados.</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        function inscrever(curso) {
+            alert(`Você se inscreveu no curso: ${curso}`);
+        }
+    </script>
+</body>
+</html>

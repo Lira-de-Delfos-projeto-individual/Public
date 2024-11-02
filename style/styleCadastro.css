@@ -1,0 +1,57 @@
+#cadastro {
+    display: flex; /* Alinha o formulário ao centro */
+    justify-content: center; 
+    align-items: center;
+    margin-top: 40px; /* Espaço acima do formulário */
+}
+
+#cadastroForm {
+    background: rgba(2, 33, 39, 0.8); /* Fundo */
+    border: 1px solid rgba(23, 92, 148, 0.747); /* Borda transparente */
+    padding: 50px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 405px; /* Largura do formulário */
+    max-width: 90%; /* Responsividade */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições */
+}
+
+#cadastroForm:hover {
+    transform: translateY(-5px); /* Levanta o formulário ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+#cadastroForm h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+#cadastroForm label {
+    display: block; /* Cada label em uma linha */
+    margin-top: 15px; /* Espaço acima de cada label */
+}
+
+#cadastroForm input {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 5px; /* Espaço acima do campo */
+    border: 1px solid #285f61fb; /* Borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+#cadastroForm button {
+    margin-top: 20px; /* Espaço acima do botão */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #1a9da7; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+#cadastroForm button:hover {
+    background-color: #0a0e15; /* Cor mais escura ao passar o mouse */
+}
+
+

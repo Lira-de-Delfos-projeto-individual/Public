@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fundo claro */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #06090a; /* Fundo escuro */
+    color: #0a9ea8;
+    padding: 20px;
+    text-align: center;
+}
+
+#container {
+    display: flex; /* Disposição em linha */
+    justify-content: center; /* Centraliza os itens */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    height: calc(100vh - 100px); /* Altura total menos o header */
+}
+
+.login-content {
+    display: flex; /* Mantém o formulário e a imagem em linha */
+    align-items: flex-start; /* Alinha o formulário e a imagem ao topo */
+}
+
+#login {
+    flex: 1; /* Ocupa uma parte do espaço disponível */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#loginForm {
+    background: rgba(2, 33, 39, 0.8); /* Fundo */
+    padding: 20px 40px;
+    border: 1px solid rgba(23, 92, 148, 0.747);
+    border-radius: 40px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 410px; /* Largura do formulário */
+    max-width: 90%; /* Responsividade */
+    margin-top: 45px; /* Adicione esta linha para aumentar o espaço acima */
+    
+}
+
+#login-img {
+    position: absolute;
+    color: #fff;
+}
+
+#loginImage {
+    max-width: 300px; /* Ajuste para o tamanho desejado */
+    height: auto; /* Manter a proporção da imagem */
+    margin-left: 10px; /* Espaço entre o formulário e a imagem */
+   
+}
+
+#loginForm:hover {
+    transform: translateY(-5px); /* Levanta o formulário ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+#loginForm h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+#loginForm label {
+    display: block; /* Cada label em uma linha */
+    margin-top: 19px; /* Espaço acima de cada label */
+}
+
+#loginForm input {
+    width: 90%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 5px; /* Espaço acima do campo */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+#loginForm button {
+    margin-top: 20px; /* Espaço acima do botão */
+    width: 100%;
+    padding: 10px; /* Espaçamento interno */
+    background-color: #165164; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 9px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+#loginForm button:hover {
+    background-color: #0a0e15; /* Cor mais escura ao passar o mouse */
+}
+
+.benefit-grid {
+    display: grid; /* Usando grid para layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas responsivas */
+    gap: 20px; /* Espaço entre os cubos */
+    margin-top: 20px; /* Espaço acima da grid */
+}
+
+.benefit-item {
+    background-color: rgba(2, 33, 39, 0.8); /* Cor de fundo dos cubos */
+    border: 1px solid rgba(23, 92, 148, 0.747); /* Borda do cubo */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 5px rgba(23, 92, 148, 0.747); /* Sombra suave */
+    transition: transform 0.3s; /* Transição suave para hover */
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px); /* Levanta o cubo ao passar o mouse */
+}
+
+#matricula {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px; /* Margem superior e inferior */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid rgba(23, 92, 148, 0.747); /* Borda transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: rgba(2, 33, 39, 0.8); /* Fundo branco para a área */
+}
+
+#matricula:hover {
+    transform: translateY(-5px); /* Levanta a seção ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+#matricula::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* Ajuste a posição */
+    left: -2px; /* Ajuste a posição */
+    right: -2px; /* Ajuste a posição */
+    bottom: -2px; /* Ajuste a posição */
+    border: 1px solid #06090a; /* Borda fina */
+    border-radius: 10px; /* Bordas arredondadas */
+    z-index: -1; /* Coloca atrás do conteúdo */
+}
+
+
+#matricula p {
+    margin: 10px 0; /* Espaço acima e abaixo do texto */
+}
+
+#matricula .button {
+    display: inline-block; /* Para o botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #1d4452; /* Cor do botão */
+    color: #fff; /* Cor do texto */
+    border: 1px solid rgba(23, 92, 148, 0.747);
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+#matricula .button:hover {
+    background-color: #0a0e15; /* Cor mais escura ao passar o mouse */
+}

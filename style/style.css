@@ -1,280 +1,307 @@
-/* Estilo geral do corpo */
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Globais */
 body {
-    background-color: #01050e; /* Fundo preto */
-    color: #FFFFFF; /* Texto branco */
-    font-family: Arial, sans-serif; /* Fonte padrão */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Espaçamento interno */
+  font-family: 'Helvetica', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
 }
 
-/* Camada overlay ajustada */
-body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade aqui */
-    z-index: 1; /* Para ficar por trás do texto */
-    display: none;
-}
-
-.logo {
-    display: flex; /* Usar flexbox para alinhar a logo e o título */
-    align-items: center; /* Alinhar verticalmente */
-}
-
-#logo {
-    width: 110px; /* Ajuste para o tamanho desejado */
-    height: auto; /* Manter proporção da imagem */
-    margin-right: 15px; /* Espaço entre a logo e o título */
-}
-
-
-/* Estilo para a seção de entrada */
-#entrada {
-    background-image: url(''); /* Imagem de fundo */
-    background-size: cover; /* Cobre toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    padding: 50px; /* Espaçamento interno */
-    color: #fffafa; /* Cor do texto */
-    min-height: 200px;
-    position: relative; /* Necessário para a camada overlay */
-}
-
-/* Estilo para as seções adicionais */
-#welcome-left, #welcome-right, #quem-sou .left, #quem-sou .right {
-    display: inline-block; /* Para posicionar lado a lado */
-    vertical-align: top; /* Alinhamento vertical */
-    width: 45%; /* Largura das colunas */
-    margin: 2.5%; /* Margem entre as colunas */
-}
-
-#welcome-left h2, #quem-sou .left h2 {
-    color: #07868f; /* Cor dos títulos */
-}
-
-/* Estilo do cabeçalho */
+/* Cabeçalho */
 header {
-    background-color: rgba(2, 33, 39, 0.8); /* Azul com transparência */
-    color: #f7f2f2cc; /* Branco para o texto do cabeçalho */
-    padding: 20px; /* Espaçamento interno do cabeçalho */
-    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
 }
 
-/* Estilo da lista de navegação */
-nav ul {
-    list-style-type: none; /* Remove marcadores da lista */
-    padding: 0; /* Remove padding da lista */
+header .logo h1 {
+  font-size: 24px;
+  color: #fff;
 }
 
-/* Estilo dos itens da navegação */
-nav ul li {
-    display: inline; /* Exibe os itens na horizontal */
-    margin: 0 15px; /* Margem entre os itens */
+header nav ul {
+  list-style: none;
+  display: flex;
 }
 
-/* Estilo dos links da navegação */
-nav a {
-    color: #FFFFFF; /* Branco para os links do cabeçalho */
-    text-decoration: none; /* Remove underline dos links */
-    transition: color 0.3s ease; /* Transição suave para hover */
+header nav ul li {
+  margin: 0 15px;
 }
 
-/* Estilo do hover dos links da navegação */
-nav a:hover {
-    text-decoration: underline; /* Sublinha ao passar o mouse */
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
 }
 
-/* Estilo da área principal */
-main {
-    padding: 20px; /* Espaçamento interno do main */
+/* Seção Hero */
+.hero {
+  height: 100vh;
+  background: url('https://images.pexels.com/photos/13673492/pexels-photo-13673492.jpeg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* Estilo do container "Sobre" */
-.sobre-container {
-    background-color: rgba(13, 15, 16, 0.9); /* Fundo com transparência */
-    margin: 20px auto; /* Margem para afastar do topo */
-    max-width: 800px; /* Largura máxima */
-    padding: 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
+.hero-conteudo h2 {
+  font-size: 2.25rem;
 }
 
-/* Estilo dos títulos na seção "Sobre" */
-.sobre-container h2 {
-    margin-top: 20px; /* Espaçamento entre os títulos */
-    color: #e0e1eb; /* Azul para os títulos */
+/* Botão de CTA */
+.botao-cta {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 40px; /* Aumentado para 40px */
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
 }
 
-/* Estilo dos parágrafos na seção "Sobre" */
-.sobre-container p {
-    margin: 10px 0; /* Espaçamento entre os parágrafos */
-}
-/* Estilo para Missão, Visão e Valores */
-.mv-container {
-    display: flex; /* Usa Flexbox para disposição em linha */
-    justify-content: space-around; /* Espaçamento igual entre os itens */
-    margin: 40px auto; /* Aumenta a margem vertical */
-    max-width: 800px; /* Limita a largura máxima do container */
+.botao-cta:hover {
+  background-color: #f1f1f1;
 }
 
-/* Estilo de cada item na seção de Missão, Visão e Valores */
-.mv-item {
-    background-color: rgba(23, 92, 148, 0.3); /* Aumenta a opacidade para um fundo mais claro */
-    border: 2px solid rgba(23, 92, 148, 0.747); /* Borda */
-    border-radius: 19px; /* Bordas arredondadas */
-    padding: 50px; /* Aumenta o espaçamento interno */
-    width: 50%; /* Largura de cada item */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
-    text-align: center; /* Centraliza o texto dentro de cada item */
-    margin: 10px; /* Adiciona margem entre os itens */
+/* Seção Sobre */
+.sobre {
+  padding: 60px 20px;
+  background-color: #111;
+  text-align: center;
+  border-radius: 20px;
 }
 
-
-/* Estilo dos títulos dos itens de Missão, Visão e Valores */
-.mv-item h3 {
-    color: #07868f; /* para os títulos */
-    margin-bottom: 15px; /* Aumenta o espaçamento abaixo do título */
+.sobre h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-/* Estilo das listas dentro dos itens de Missão, Visão e Valores */
-.mv-item ul {
-    list-style-type: disc; /* Estilo da lista */
-    padding-left: 20px; /* Espaçamento à esquerda para a lista */
+.sobre p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 20px;
 }
 
-
-/* Estilo dos botões */
-button {
-    background-color: #0aa88d; /* botões */
-    color: #FFFFFF; /* Branco para texto do botão */
-    border: none; /* Sem borda */
-    padding: 10px 20px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de ponteiro */
-    transition: background-color 0.3s ease; /* Transição suave para hover */
+/* Seção Novidades */
+.novidades {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-/* Estilo do hover dos botões */
-button:hover {
-    background-color: #007C92; /* Azul ao passar o mouse */
+.novidades h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
 }
 
-/* Estilo do rodapé */
-footer {
-    background-color: rgba(13, 31, 34, 0.8); /* Azul com transparência para o rodapé */
-    color: #FFFFFF; /* Branco para o texto do rodapé */
-    text-align: center; /* Centraliza o texto do rodapé */
-    padding: 10px; /* Espaçamento interno do rodapé */
-    position: relative; /* Para evitar sobreposições */
+.novidades-item {
+  background-color: #161515;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
 }
 
-/* Estilo para a seção de cursos */
-.cursos-container {
-    display: flex; /* Usa Flexbox para disposição em linha */
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
-    justify-content: space-around; /* Espaçamento igual entre os itens */
-    margin: 20px auto; /* Margem superior e inferior para espaçamento */
-    max-width: 1200px; /* Limita a largura máxima do container */
+.novidades-item img.novidade-imagem {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-/* Estilo dos cursos individuais */
+.novidades-item h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.novidades-item p {
+  font-size: 16px;
+}
+
+/* Seção de Cursos */
+.cursos {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cursos h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.lista-cursos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Alterado para 4 colunas */
+  gap: 30px;
+}
+
 .curso {
-    background-color: rgba(8, 8, 8, 0.7); /* Fundo escuro com transparência */
-    border: 1px solid #080a0e; /* Borda */
-    border-radius: 10px; /* Arredondar os cantos */
-    padding: 16px; /* Espaçamento interno */
-    margin: 10px; /* Margem entre os cursos */
-    width: calc(45%); /* Ajusta a largura para 45% para permitir 2 na mesma linha */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
-    text-align: center; /* Centraliza o texto */
-    background-size: cover;
-    background-position: center;
-    color: #0ea58c;
+  background-color: #161414;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
-#fale-conosco {
-    background-color: rgba(13, 15, 16, 0.9); /* Fundo com transparência */
-    padding: 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
+.curso:nth-child(1),
+.curso:nth-child(2),
+.curso:nth-child(3),
+.curso:nth-child(4) {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+.curso:nth-child(1) {
+  background-image: url('https://images.pexels.com/photos/4861059/pexels-photo-4861059.jpeg');
+}
+.curso:nth-child(2) {
+  background-image: url('https://images.pexels.com/photos/7095506/pexels-photo-7095506.jpeg');
+}
+.curso:nth-child(3) {
+  background-image: url('https://images.pexels.com/photos/2118045/pexels-photo-2118045.jpeg');
+}
+.curso:nth-child(4) {
+  background-image: url('https://images.pexels.com/photos/4038314/pexels-photo-4038314.jpeg');
+}
+.curso:hover {
+  filter: blur(0);
+}
+
+.curso h3 {
+  font-size: 24px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  z-index: 1;
+  margin-bottom: 25px;
+}
+
+/* Seção FAQ */
+.faq {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.botao-acordeao {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-acordeao:hover {
+  background-color: #444;
+}
+
+.conteudo-acordeao {
+  padding: 15px;
+  background-color: #1b1b1b;
+  color: #bbb;
+  display: none;
+  border-radius: 5px;
+}
+
+.botao-acordeao.active + .conteudo-acordeao {
+  display: block;
+}
+
+/* Seção de Contato */
+.contato {
+  padding: 30px 20px;
+  background-color: #111;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
 .contato-container {
-    display: flex; /* Usa Flexbox para disposição em linha */
-    justify-content: space-around; /* Espaçamento igual entre os itens */
-    margin-top: 20px; /* Margem acima do container */
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.contato-item {
-    background-color: rgba(16, 114, 101, 0.8); /* Fundo mais claro para cada item */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
-    width: 30%; /* Largura de cada item */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
-    margin: 10px; /* Margem entre os itens */
-    text-align: left; /* Alinha o texto à esquerda dentro de cada item */
+.form-contato {
+  background-color: #222;
+  padding: 30px;
+  border-radius: 8px;
 }
 
-.redes-sociais {
-    margin-top: 30px; /* Espaçamento acima das redes sociais */
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
 }
 
-.redes-sociais h3 {
-    color: #e0e1eb; /* Cor do título das redes sociais */
+.form-contato button {
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
-.redes-sociais ul {
-    list-style-type: none; /* Remove marcadores da lista */
-    padding: 0; /* Remove padding da lista */
+.form-contato button:hover {
+  background-color: #f1f1f1;
 }
 
-.redes-sociais ul li {
-    display: inline; /* Exibe os itens na horizontal */
-    margin: 0 10px; /* Margem entre os itens */
+/* Rodapé */
+footer {
+  padding: 20px;
+  background-color: #111;
+  text-align: center;
+  color: #bbb;
 }
 
-.redes-sociais a {
-    color: #07868f; /* Cor dos links */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Transição suave para hover */
+footer .links-sociais a {
+  color: #bbb;
+  margin: 0 10px;
+  font-size: 18px;
 }
 
-.redes-sociais a:hover {
-    color: #0aa88d; /* Cor ao passar o mouse */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .contato-item {
-        width: 100%; /* Cada item ocupa 100% da largura em telas menores */
-    }
-}
-
-
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .curso, #welcome-left, #welcome-right, #quem-sou .left, #quem-sou .right {
-        width: 100%; /* Cada curso ocupa 100% da largura em telas menores */
-    }
-}
-
-/* Exemplo de curso com imagem específica */
-.curso-violao {
-    background-image: url('https://images.pexels.com/photos/2118045/pexels-photo-2118045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-}
-
-.curso-teoria {
-    background-image: url('https://images.pexels.com/photos/7521300/pexels-photo-7521300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-}
-
-.curso-violino {
-    background-image: url('https://images.pexels.com/photos/7095506/pexels-photo-7095506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-}
-
-.curso-piano {
-    background-image: url('https://images.pexels.com/photos/10251747/pexels-photo-10251747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+footer .links-sociais a:hover {
+  color: #fff;
 }

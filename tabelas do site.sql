@@ -5,7 +5,7 @@ CREATE TABLE Usuarios (
     senha VARCHAR(255) NOT NULL,
     telefone VARCHAR(20),
     endereco VARCHAR(255),
-    data_criacao DATETIME,
+    data_criacao DATETIME DEFAULT '2024-01-01 00:00:00',
     data_nascimento DATE,
     status ENUM('ativo', 'inativo') DEFAULT 'ativo' -- Para controlar o status do usuário
 );

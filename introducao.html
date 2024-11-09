@@ -1,211 +1,185 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lira de Delfos</title>
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Cursos de Música</title>
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header role="banner">
-        <div class="logo">
-            <img src="logo.png" alt="Logo da Escola de Música Lira de Delfos" id="logo">
-            <h1>Lira de Delfos</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="introducao.html">Home</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#apostila">Apostila de Teoria Musical</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="login.html" class="button">Login</a></li>
-                <li><a href="cadastro.html" class="button">Cadastro</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <h1>Lira de Delfos</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#curso">Cursos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="login.html">Login/Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="entrada">
-            <h2>Bem-vindo ao nosso espaço musical! 🎶</h2>
-            <p>Aqui você encontrará cursos para aprender música do zero e entender a importância dessa arte na sua vida.</p>
-            <p>Nosso ambiente é acolhedor e inspirador, ideal para todas as idades e níveis de experiência. Se você deseja tocar um instrumento, cantar ou simplesmente entender melhor a teoria musical, nós temos o curso certo para você!</p>
-            <p>Venha explorar sua criatividade e desenvolver suas habilidades musicais conosco. Estamos aqui para ajudar você a transformar sua paixão pela música em realidade!</p>
-            <a href="#cursos" class="button">Comece Aqui</a>
-        </section>
+  <!-- Seção Hero (Início) -->
+  <section id="home" class="hero">
+    <div class="hero-conteudo">
+      <h2>Transforme sua paixão por música em aprendizado</h2>
+      <a href="#curso" class="botao-cta">Explorar Cursos</a>
+    </div>
+  </section>
 
-        <section id="porque-musica">
-            <h2>Por que Fazer Música?</h2>
-            <p>A música é uma linguagem universal que traz benefícios incríveis para todos. Aqui estão algumas razões pelas quais você deve considerar aprender música:</p>
-            <h3>Benefícios Pessoais</h3>
-            <ul>
-                <li><strong>Desenvolvimento Pessoal:</strong> Melhora disciplina e paciência.</li>
-                <li><strong>Expressão Emocional:</strong> Uma forma de comunicar sentimentos.</li>
-            </ul>
-            <h3>Benefícios Cognitivos</h3>
-            <ul>
-                <li><strong>Melhora da Memória:</strong> Aumenta a capacidade de memória.</li>
-                <li><strong>Desenvolvimento de Habilidades:</strong> Melhora coordenação e concentração.</li>
-            </ul>
-            <h3>Benefícios Sociais</h3>
-            <ul>
-                <li><strong>Conexão e Colaboração:</strong> Cria laços entre pessoas.</li>
-                <li><strong>Cultura e Comunidade:</strong> Fortalece a identidade cultural.</li>
-            </ul>
-            <h3>Benefícios para a Saúde Mental</h3>
-            <ul>
-                <li><strong>Redução do Estresse:</strong> Alivia a ansiedade.</li>
-                <li><strong>Aumento do Bem-Estar:</strong> Provoca felicidade.</li>
-            </ul>
-            <p>Se você ainda não começou sua jornada musical, agora é a hora! Entre em contato e descubra como podemos ajudar você a fazer música.</p>
-        </section>
+  <!-- Seção Sobre -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <p>
+        Somos uma equipe dedicada a fornecer conteúdo de alta qualidade para ajudar você a alcançar seus objetivos. Com anos de experiência, nossa missão é entregar valor e inovação em cada projeto. Seja para aprender novas habilidades ou explorar tendências do mercado, estamos aqui para apoiar você em sua jornada.
+      </p>
+      <p>
+        Nossa visão é ser referência no setor, oferecendo cursos e recursos que realmente fazem a diferença. Junte-se a nós e descubra como podemos crescer juntos.
+      </p>
+    </div>
+  </section>
 
-        <section id="sobre" class="sobre-container">
-            
-            
-            <h2>Missão, Visão e Valores</h2>
-            <div class="mv-container">
-                <div class="mv-item">
-                    <h3>Missão</h3>
-                    <p>Proporcionar um ambiente acolhedor e inspirador onde pessoas de todas as idades possam aprender, explorar e expressar sua paixão pela música.</p>
-                </div>
-                
-                <div class="mv-item">
-                    <h3>Visão</h3>
-                    <p>Ser reconhecida como a principal escola de música da região, impactando positivamente a vida de nossos alunos através da música.</p>
-                </div>
-                
-                <div class="mv-item">
-                    <h3>Valores</h3>
-                    <ul>
-                        <li>Paixão pela Música</li>
-                        <li>Inclusividade</li>
-                        <li>Excelência Educacional</li>
-                        <li>Criatividade</li>
-                        <li>Comunidade</li>
-                        <li>Crescimento Pessoal</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <!-- Seção de Novidades -->
+  <section class="novidades">
+    <h2>Novidades e Dicas</h2>
+    <div class="novidades-item">
+      <img src="https://images.pexels.com/photos/7521300/pexels-photo-7521300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Melhore sua Técnica no Violão" class="novidade-imagem">
 
-        <section id="depoimentos">
-            <h2>O que Nossos Alunos Dizem 😊</h2>
-            <blockquote>
-                <p>"Estudar música aqui mudou minha vida! Nunca imaginei que poderia tocar tão bem em tão pouco tempo." - Maria</p>
-            </blockquote>
-            <blockquote>
-                <p>"As aulas são incríveis! O professor Robert é muito dedicado e apaixonado." - João</p>
-            </blockquote>
-        </section>
+      <h3>Nova Aula de Teoria Musical Disponível!</h3>
+      <p>Acabamos de adicionar uma nova aula de teoria musical para iniciantes. Aprenda os conceitos básicos de leitura musical!</p>
+      <a href="#curso" class="botao-cta">Leia mais</a>
+    </div>
+    <div class="novidades-item">
+      <img src="https://images.pexels.com/photos/6054104/pexels-photo-6054104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Melhore sua Técnica no Violão" class="novidade-imagem">
+      <h3>Melhore sua Técnica no Violino</h3>
+      <p>Confira nossas dicas e truques para melhorar sua técnica de dedilhado no violino e tocar com mais fluidez.</p>
+      <a href="#curso" class="botao-cta">Leia mais</a>
+    </div>
+  </section>
 
-        <section id="cursos">
-            <h2>Nossos Cursos</h2>
-            <p>Descubra nossos cursos personalizados, projetados para atender às suas necessidades e interesses musicais.</p>
-            <div class="cursos-container">
-                <div class="curso curso-violao">
-                    <h3>Violão para Iniciantes</h3>
-                    <p>Aprenda os fundamentos do violão em um ambiente descontraído. Desde as primeiras notas até acordes mais complexos, você tocará suas músicas favoritas rapidamente.</p>
-                    <button onclick="inscrever('Violão para Iniciantes')">Conheça o Curso</button>
-                </div>
-                <div class="curso curso-teoria">
-                    <h3>Teoria Musical Básica</h3>
-                    <p>Entenda os conceitos fundamentais da teoria musical, incluindo notas, escalas e ritmos. Este curso é ideal para quem deseja aprimorar suas habilidades de leitura e escrita musical.</p>
-                    <button onclick="inscrever('Teoria Musical Básica')">Conheça o Curso</button>
-                </div>
-                <div class="curso curso-violino">
-                    <h3>Violino para Iniciantes</h3>
-                    <p>Descubra a beleza do violino e aprenda técnicas de arco, afinação e expressão musical. Este curso é ideal para iniciantes e músicos que desejam aprimorar suas habilidades.</p>
-                    <button onclick="inscrever('Canto e Técnica Vocal')">Conheça o Curso</button>
-                </div>
-                <div class="curso curso-piano">
-                    <h3>Piano para Todos</h3>
-                    <p>Explore a magia do piano! Aulas para todos os níveis, focando na prática, na técnica e na expressão musical. Venha desenvolver seu estilo e tocar suas canções favoritas!</p>
-                    <button onclick="inscrever('Piano para Todos')">Conheça o Curso</button>
-                </div>
-            </div>
-        </section>
+  <!-- Seção de Cursos -->
+  <section id="curso" class="cursos">
+    <h2>Nossos Cursos</h2>
+    <div class="lista-cursos">
+      <div class="curso">
+        <h3>Teoria Musical</h3>
+        <p></p>
+        <a href="login.html" class="botao-cta">Saiba Mais</a>
         
-        <section id="apostila">
-            <h2>Apostila de Teoria Musical</h2>
-            <p>Bem-vindo à nossa apostila de teoria musical! Aqui você encontrará um recurso valioso para aprofundar seu conhecimento sobre os fundamentos da música.</p>
-            <p>Nossa apostila abrange os seguintes tópicos:</p>
-            <ul>
-                <li><strong>Notação Musical:</strong> Entenda as notas, ritmos e símbolos utilizados na escrita musical.</li>
-                <li><strong>Escalas:</strong> Aprenda sobre escalas maiores, menores e modos.</li>
-                <li><strong>Intervalos:</strong> Descubra a distância entre as notas e como utilizá-los em suas composições.</li>
-                <li><strong>Acórdios:</strong> Conheça os diferentes tipos de acordes e suas formações.</li>
-                <li><strong>Harmonia:</strong> Compreenda os princípios de como as notas interagem entre si.</li>
-            </ul>
-            <p>Para acessar a apostila completa, clique no link abaixo:</p>
-            <a href="apostila.pdf" class="button" download>Acesse a Apostila Completa</a>
-        </section>
+      </div>
+      <div class="curso">
+        <h3>Violino</h3>
+        <p></p>
+        <a href="login.html" class="botao-cta">Saiba Mais</a>
+      </div>
+      <div class="curso">
+        <h3>Violão</h3>
+        <p></p>
+        <a href="login.html" class="botao-cta">Saiba Mais</a>
+      </div>
+      <div class="curso">
+        <h3>Piano</h3>
+        <p></p>
+        <a href="login.html" class="botao-cta">Saiba Mais</a>
+      </div>
+    </div>
+  </section>
 
-        <section id="faq">
-            <h2>Dúvidas Frequentes</h2>
-            <div class="faq-item">
-                <button class="faq-question">Como faço para me inscrever em um curso?</button>
-                <div class="faq-answer">
-                    <p>Para se inscrever, basta acessar a seção de cursos e clicar no botão "Inscreva-se" ao lado do curso desejado.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Os cursos têm certificado?</button>
-                <div class="faq-answer">
-                    <p>Sim, todos os cursos oferecem um certificado de conclusão para os alunos aprovados.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Seção de FAQ -->
+  <section class="faq">
+    <h2>Dúvidas Frequentes</h2>
+    <div class="acordeao">
+      <!-- Pergunta 1 -->
+      <button class="botao-acordeao">Como faço para me inscrever no curso?</button>
+      <div class="conteudo-acordeao">
+        <p>Para se inscrever em um curso, basta acessar a página do curso desejado e clicar no botão "Inscreva-se". Em seguida, você será redirecionado para a página de pagamento.</p>
+      </div>
 
-        <footer>
-            <section id="fale-conosco">
-                <h2>Fale Conosco</h2>
-                <div class="contato-container">
-                    <div class="contato-item">
-                        <h3>Email</h3>
-                        <p>contato@exemplo.com</p>
-                    </div>
-                    <div class="contato-item">
-                        <h3>Telefone</h3>
-                        <p>(11) 1234-5678</p>
-                    </div>
-                    <div class="contato-item">
-                        <h3>Endereço</h3>
-                        <p>Rua Exemplo, 123 - São Paulo, SP</p>
-                    </div>
-                </div>
-                <div class="redes-sociais">
-                    <h3>Siga-nos</h3>
-                    <div class="footer-section">
-                        <h2>Nossas Redes</h2>
-                        <ul>
-                            <li><a href="https://facebook.com/liradedelfos" target="_blank">Facebook</a></li>
-                            <li><a href="https://instagram.com/liradedelfos" target="_blank">Instagram</a></li>
-                            <li><a href="https://twitter.com/liradedelfos" target="_blank">Twitter</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            
-            <div class="footer-section">
-                <p>&copy; 2024 Lira de Delfos. Todos os direitos reservados.</p>
-            </div>
-        </footer>
-    </main>
+      <!-- Pergunta 2 -->
+      <button class="botao-acordeao">Quais são os métodos de pagamento?</button>
+      <div class="conteudo-acordeao">
+        <p>Você pode pagar pelos cursos usando cartões de crédito, PayPal, e transferências bancárias. Todos os pagamentos são seguros e processados por plataformas confiáveis.</p>
+      </div>
 
-    <script src="script.js"></script>
-    <script>
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-            });
-        });
+      <!-- Pergunta 3 -->
+      <button class="botao-acordeao">Preciso de algum material específico para os cursos?</button>
+      <div class="conteudo-acordeao">
+        <p>Para os cursos de instrumentos, recomendamos que você tenha seu próprio instrumento (violão, piano, violino). Para os cursos de teoria musical, você precisará apenas de papel e caneta para fazer anotações e praticar os exercícios.</p>
+      </div>
 
-        function inscrever(curso) {
-            alert(`Você se inscreveu no curso: ${curso}`);
-        }
-    </script>
+      <!-- Pergunta 4 -->
+      <button class="botao-acordeao">Os cursos possuem certificado?</button>
+      <div class="conteudo-acordeao">
+        <p>Sim! Ao concluir o curso, você receberá um certificado digital que poderá ser baixado ou impresso para fins de comprovação.</p>
+      </div>
+
+      <!-- Pergunta 5 -->
+      <button class="botao-acordeao">Como acesso o material do curso?</button>
+      <div class="conteudo-acordeao">
+        <p>Após a inscrição, você receberá um login e senha para acessar os materiais diretamente na plataforma, que está disponível 24/7.</p>
+      </div>
+
+      <!-- Pergunta 6 -->
+      <button class="botao-acordeao">Posso acessar os cursos de qualquer lugar?</button>
+      <div class="conteudo-acordeao">
+        <p>Sim! Os cursos estão disponíveis online e podem ser acessados de qualquer lugar, basta ter uma conexão com a internet.</p>
+      </div>
+
+      <!-- Pergunta 7 -->
+      <button class="botao-acordeao">Posso refazer um curso depois de finalizado?</button>
+      <div class="conteudo-acordeao">
+        <p>Sim! Você pode refazer os cursos quantas vezes quiser, enquanto sua inscrição estiver ativa.</p>
+      </div>
+
+      <!-- Pergunta 8 -->
+      <button class="botao-acordeao">O que acontece se eu não conseguir terminar o curso?</button>
+      <div class="conteudo-acordeao">
+        <p>Se você não conseguir terminar dentro do prazo, entre em contato com nosso suporte. Podemos prorrogar o prazo ou oferecer uma nova inscrição em outro momento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <h2>Fale Conosco</h2>
+    <div class="contato-container">
+      <!-- Formulário de Contato -->
+      <form action="#contato" method="post" class="form-contato">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+  
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+  
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="4" required></textarea>
+  
+        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+      </form>
+  
+      <!-- Informações de Contato -->
+      <div class="contato-info">
+        <p><strong>Email:</strong> contato@liradedelfos.com.br</p>
+        <p><strong>Telefone:</strong> (11) 9873-5678</p>
+        <p><strong>Endereço:</strong> Rua Haddock-Lobo, 123 - Cidade - São Paulo, Estado - São Paulo</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Lira de Delfos - Todos os direitos reservados.</p>
+    <div class="links-sociais">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

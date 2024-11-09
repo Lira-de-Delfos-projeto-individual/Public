@@ -1,13 +1,22 @@
-document.getElementById('contatoForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const contatoNome = document.getElementById('contatoNome').value;
-    const contatoEmail = document.getElementById('contatoEmail').value;
-    const mensagem = document.getElementById('mensagem').value;
-
-    alert(`Mensagem enviada com sucesso!\nNome: ${contatoNome}\nE-mail: ${contatoEmail}`);
-    this.reset(); // Limpa o formulário após o envio
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleciona todos os botões de acordeão
+  var botoesAcordeao = document.querySelectorAll('.botao-acordeao');
+  
+  // Adiciona um evento de clique a cada botão
+  botoesAcordeao.forEach(function(botao) {
+    botao.addEventListener('click', function() {
+      // Alterna a classe 'active' no botão que foi clicado
+      this.classList.toggle('active');
+      
+      // Seleciona o conteúdo da pergunta
+      var conteudo = this.nextElementSibling;
+      
+      // Alterna a visibilidade do conteúdo
+      if (conteudo.style.display === 'block') {
+        conteudo.style.display = 'none';
+      } else {
+        conteudo.style.display = 'block';
+      }
+    });
+  });
 });
-
-function inscrever(curso) {
-    alert(`Você se inscreveu no curso: ${curso}`);
-}

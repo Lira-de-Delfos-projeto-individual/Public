@@ -54,19 +54,6 @@ header nav ul li a:hover {
   color: #f1f1f1;
 }
 
-/* Responsividade para o Menu (em telas pequenas) */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
 /* Estilo para a página de Login */
 .login-page {
   display: flex;

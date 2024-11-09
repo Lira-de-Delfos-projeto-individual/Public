@@ -1,57 +1,184 @@
-#cadastro {
-    display: flex; /* Alinha o formulário ao centro */
-    justify-content: center; 
+/* Reset básico para garantir consistência entre os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos Globais */
+  body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Cabeçalho */
+  header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 40px; /* Espaço acima do formulário */
-}
-
-#cadastroForm {
-    background: rgba(2, 33, 39, 0.8); /* Fundo */
-    border: 1px solid rgba(23, 92, 148, 0.747); /* Borda transparente */
-    padding: 50px;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    width: 405px; /* Largura do formulário */
-    max-width: 90%; /* Responsividade */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transições */
-}
-
-#cadastroForm:hover {
-    transform: translateY(-5px); /* Levanta o formulário ao passar o mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
-}
-
-#cadastroForm h2 {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 10px; /* Espaço abaixo do título */
-}
-
-#cadastroForm label {
-    display: block; /* Cada label em uma linha */
-    margin-top: 15px; /* Espaço acima de cada label */
-}
-
-#cadastroForm input {
-    width: 100%; /* Largura total */
-    padding: 10px; /* Espaçamento interno */
-    margin-top: 5px; /* Espaço acima do campo */
-    border: 1px solid #285f61fb; /* Borda padrão */
-    border-radius: 10px; /* Bordas arredondadas */
-}
-
-#cadastroForm button {
-    margin-top: 20px; /* Espaço acima do botão */
-    padding: 10px; /* Espaçamento interno */
-    background-color: #1a9da7; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto */
-    border: none; /* Remove a borda */
-    border-radius: 10px; /* Bordas arredondadas */
-    cursor: pointer; /* Indica que é clicável */
-    transition: background-color 0.3s; /* Transição suave */
-}
-
-#cadastroForm button:hover {
-    background-color: #0a0e15; /* Cor mais escura ao passar o mouse */
-}
-
-
+    padding: 20px;
+    background-color: #111;
+  }
+  
+  header .logo h1 {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  /* Seção Cadastro */
+  .cadastro-page {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .cadastro-page h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Formulário de Cadastro */
+  .cadastro-column {
+    flex: 1;
+    max-width: 500px;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cadastro-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cadastro-form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .cadastro-form input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .cadastro-form button {
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cadastro-form button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Link para login */
+  .login-link {
+    margin-top: 20px;
+  }
+  
+  .login-link p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .login-link .btn-login {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #444;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-link .btn-login:hover {
+    background-color: #555;
+  }
+  
+  .depoimentos-column {
+    flex: 1;
+    max-width: 400px;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .depoimentos-column h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .depoimento {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .depoimento p {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 10px;
+  }
+  
+  .depoimento h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .cadastro-column {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .benefits-column {
+      margin-top: 40px;
+    }
+  }
+  

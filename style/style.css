@@ -5,6 +5,17 @@
   box-sizing: border-box;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-imagem {
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  margin-right: 40px; /* Espaço entre a logo e o menu */
+}
+
 /* Estilos Globais */
 body {
   font-family: 'Helvetica', sans-serif;
@@ -44,7 +55,7 @@ header nav ul li a {
 
 /* Seção Hero */
 .hero {
-  height: 100vh;
+  height: 60vh;
   background: url('https://images.pexels.com/photos/13673492/pexels-photo-13673492.jpeg') no-repeat center center/cover;
   display: flex;
   justify-content: center;

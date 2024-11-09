@@ -1,0 +1,206 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos Globais */
+  body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Cabeçalho */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+  }
+  
+  header .logo h1 {
+    font-size: 24px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  /* Seção de Perfil */
+  .perfil-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .perfil-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: fixed; /*Para o posicionamento da imagem*/
+  }
+  
+  .perfil-info {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;/*Só para carantir que o texto fique acima da iamgem */
+  }
+
+  .perfil-container::before {
+    content: "";
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /*Só para garantir que a imagem fique atrás do conteúdo*/
+  }
+  
+  .perfil-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .foto-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .btn-editar {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .btn-editar:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Seção de Meus Cursos */
+  .cursos-section {
+    padding: 60px 20px;
+    background-color: #1b1b1b;
+  }
+  
+  .cursos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .curso-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .curso-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .curso-item p {
+    font-size: 16px;
+  }
+  
+  .btn-cursos {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .btn-cursos:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Seção de Aulas */
+  .aulas-section {
+    padding: 60px 20px;
+  }
+  
+  .aulas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .aula-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .aula-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .aula-item p {
+    font-size: 16px;
+  }
+  
+  .btn-aula {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .btn-aula:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  

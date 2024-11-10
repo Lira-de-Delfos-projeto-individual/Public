@@ -13,6 +13,8 @@
     line-height: 1.6;
     margin: 0;
   }
+
+  
   
   /* Cabeçalho */
   header {
@@ -44,34 +46,55 @@
   
   /* Seção de Perfil */
   .perfil-section {
-    padding: 60px 20px;
+    display: flex;
+    left: 20px;
+    top: 60px;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100px;
     text-align: center;
+    border-radius: 10px;
+    z-index: 1000;
   }
   
   .perfil-container {
-    max-width: 900px;
-    margin: 0 auto;
+    background-image: url('');
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    height: 100%; /* Ajuste conforme necessário */
+    padding: 20px; /* Ajuste o preenchimento */
     display: flex;
-    justify-content: center;
-    position: fixed; /*Para o posicionamento da imagem*/
+    flex-direction: column; /* Alinha os elementos na vertical */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 10px;
   }
   
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  button.btn-editar {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+
+  button.btn-editar:hover {
+    background-color: #900a00;
+  }
+
   .perfil-info {
-    background-color: #222;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex: 1;
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;/*Só para carantir que o texto fique acima da iamgem */
+    color: #fff;
+    width: 100%;
   }
 
   .perfil-container::before {
-    content: "";
+    
     background-image: url('');
     background-size: cover;
     background-position: center;
@@ -79,20 +102,20 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 10%;
+    height: 5%;
     z-index: 1; /*Só para garantir que a imagem fique atrás do conteúdo*/
   }
   
   .perfil-info h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 1%;
   }
   
   .foto-perfil {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 90px;
     object-fit: cover;
     margin-bottom: 20px;
   }
@@ -112,6 +135,47 @@
     background-color: #f1f1f1;
   }
   
+  /* Atividade */
+  .atividades-section {
+    padding: 20px;
+    background-color: #181717;
+    border-radius: 15px 20px;
+    margin-top: 20px;
+  }
+  
+  .atividades-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .atividade-item {
+    background: #131212;
+    padding: 10px;
+    border-radius: 25px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 250px;
+    box-sizing: border-box;
+  }
+  
+  .btn-atividade {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px 25px;
+    transition: background-color 0.3s;
+    display: inline-block;
+  }
+  
+  .btn-atividade:hover {
+    background-color: #388e3c;
+  }
+  
+
   /* Seção de Meus Cursos */
   .cursos-section {
     padding: 60px 20px;
@@ -134,20 +198,22 @@
   
   .curso-item h3 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 10px
   }
   
   .curso-item p {
-    font-size: 16px;
+    margin-bottom: 10px
   }
   
   .btn-cursos {
-    background-color: #fff;
+    margin-top: 10px;
+    background-color: #4caf50;
     color: #000;
     padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s;
   }
   
   .btn-cursos:hover {
@@ -175,15 +241,15 @@
   
   .aula-item h3 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 26px;
   }
   
   .aula-item p {
-    font-size: 16px;
+    margin-bottom: 10px
   }
   
   .btn-aula {
-    background-color: #fff;
+    background-color: #4caf50;
     color: #000;
     padding: 10px 20px;
     border-radius: 30px;

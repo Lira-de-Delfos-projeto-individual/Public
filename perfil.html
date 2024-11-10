@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Área do Usuário - Lira de Delfos</title>
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/styleArea.css">
+  <link rel="stylesheet" href="style/stylePerfil.css">
 </head>
 <body>
   <!-- Cabeçalho -->
@@ -17,9 +17,11 @@
       <ul>
         <li><a href="#perfil">Meu Perfil</a></li>
         <li><a href="#cursos">Meus Cursos</a></li>
+        <li><a href="dashboards.html">Meu Progresso</a></li>
         <li><a href="#aulas">Aulas</a></li>
         <li><a href="#configuracoes">Configurações</a></li>
-        <li><a href="logout.html">Sair</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="index.html">Sair</a></li>
       </ul>
     </nav>
   </header>
@@ -28,14 +30,37 @@
   <section id="perfil" class="perfil-section">
     <div class="perfil-container">
       <div class="perfil-info">
-        <h2>Olá, João Silva!</h2>
         <img src="https://via.placeholder.com/150" alt="Foto do Perfil" class="foto-perfil">
+        <h2>Olá, Elizabth Oliveira!</h2>
         <p>Email: - elizabeth.oliveira@email.com</p>
         <p>Status: Membro Premium</p>
         <button class="btn-editar">Editar Perfil</button>
       </div>
     </div>
   </section>
+
+  <!-- Seção de Atividades Recentes -->
+<section id="atividades" class="atividades-section">
+  <h2>Atividades Recentes</h2>
+  <div class="atividades-container">
+    <div class="atividade-item">
+      <h3>Última Aula Assistida:</h3>
+      <p>Aula 3: Exercícios de Escala no Violino</p>
+      <a href="aula3.html" class="btn-atividade">Continuar</a>
+    </div>
+    <div class="atividade-item">
+      <h3>Progresso Geral:</h3>
+      <p>75% do Curso de Violino para Iniciantes</p>
+      <a href="dashboards.html" class="btn-atividade">Ver Progresso</a>
+    </div>
+    <div class="atividade-item">
+      <h3>Recomendação para Você:</h3>
+      <p>Curso de Teoria Musical para Avançar sua Técnica</p>
+      <a href="index.html#curso.html" class="btn-atividade">Saiba Mais</a>
+    </div>
+  </div>
+</section>
+
 
   <!-- Seção Meus Cursos -->
   <section id="cursos" class="cursos-section">

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var conteudo = this.nextElementSibling;
       
       // Alterna a visibilidade do conteúdo
-      if (conteudo.style.display === 'block') {
+      if (conteudo.style.display == 'block') {
         conteudo.style.display = 'none';
       } else {
         conteudo.style.display = 'block';
@@ -20,3 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+// aqui fizemos comportamento de acordeão, ou seja, estamos mostrando e escondendo algum conteúdo
+// o queryselectorAll retorna uma nodelist de todos os botõees
+// Para cada botão de acordeão, o código adiciona um ouvinte de evento (addEventListener) para escutar o evento de clique.
+//  A função toggle verifica se a classe active já está presente:

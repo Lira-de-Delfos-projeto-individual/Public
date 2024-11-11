@@ -6,6 +6,48 @@
   <title>Cadastro - Lira de Delfos</title>
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/styleCadastro.css">
+  
+  <script>
+    // Função para validar o formulário
+    function validarCadastro(event) {
+      // Impede o envio real do formulário para testes (você pode remover se for enviar para um servidor)
+      event.preventDefault();
+
+      var email = document.getElementById('email').value;
+      var senha = document.getElementById('senha').value;
+      var confirmaSenha = document.getElementById('confirma-senha').value;
+
+      // Validação de e-mail
+      if (!email.endsWith('.com')) {
+        alert('O e-mail deve terminar com ".com".');
+        return;
+      }
+
+      // Validação da senha (mínimo de 8 caracteres)
+      if (senha.length < 8) {
+        alert('A senha deve ter no mínimo 8 caracteres.');
+        return;
+      }
+
+      // Validação de confirmação de senha
+      if (senha !== confirmaSenha) {
+        alert('As senhas não coincidem.');
+        return;
+      }
+
+      // Se todas as validações passarem, mostra a mensagem de sucesso
+      var mensagemSucesso = document.createElement('div');
+      mensagemSucesso.classList.add('mensagem-sucesso');
+      mensagemSucesso.innerHTML = 'Cadastro feito com sucesso!';
+      
+      // Encontrar o contêiner do formulário e adicionar a mensagem após o formulário
+      var formContainer = document.querySelector('.cadastro-column');
+      formContainer.appendChild(mensagemSucesso);
+      
+      // Você pode também limpar os campos, se necessário
+      document.querySelector('.cadastro-form').reset();
+    }
+  </script>
 </head>
 <body>
   <!-- Cabeçalho -->
@@ -30,7 +72,7 @@
     <div class="content-container">
       <!-- Formulário de Cadastro -->
       <div class="cadastro-column">
-        <form class="cadastro-form">
+        <form class="cadastro-form" onsubmit="validarCadastro(event)">
           <h2>Crie sua conta</h2>
 
           <!-- Nome -->
@@ -73,7 +115,6 @@
           <h4>- Arcangelo Corelli</h4>
         </div>
       </div>
-      
     </div>
   </div>
 

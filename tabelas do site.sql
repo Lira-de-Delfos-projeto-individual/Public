@@ -64,10 +64,8 @@ CREATE TABLE FAQ (
 
 -- Inserindo Usuários
 INSERT INTO Usuarios (nome, email, senha) VALUES
-('Fabio Lima', 'joao@example.com', 'senha123'),
-('Maria Oliveira', 'maria@example.com', 'senha456'),
-('Carlos Eduardo', 'carlos@example.com', 'senha789'),
-('Sofia Souza', 'sofia@example.com', 'senha321'),
+('Giuseppe Tartini', 'giuseppe@example.com', 'senha123'),
+('Arcangelo Corelli', 'arcangelo@example.com', 'senha456'),
 ('Elizabeth Oliveira', 'elizabeth@example.com', 'senha432');
 
 -- Inserindo Cursos

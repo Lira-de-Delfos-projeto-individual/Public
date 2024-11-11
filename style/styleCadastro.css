@@ -25,7 +25,7 @@
   }
   
   header .logo h1 {
-    font-size: 24px;
+    font-size: 35px;
     color: #fff;
   }
   
@@ -41,7 +41,7 @@
   header nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
   }
   
   /* Seção Cadastro */
@@ -94,7 +94,7 @@
   
   .cadastro-form button {
     padding: 12px 30px;
-    background-color: #fff;
+    background-color: #28a745;
     color: #000;
     border: none;
     border-radius: 30px;
@@ -181,4 +181,16 @@
       margin-top: 40px;
     }
   }
+
+  /* Adicionando estilo para a mensagem de sucesso */
+.mensagem-sucesso {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #28a745;  /* Verde */
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 5px;
+}
+
   

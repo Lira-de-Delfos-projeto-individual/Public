@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Progresso</title>
+  <link rel="stylesheet" href="style/styleDashboards.css">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Meu Progresso</h1>
+    <p>Olá, Elizabeth Oliveira! Veja seus gráficos de desempenho nos cursos.</p>
+  </header>
+
+  <section class="dashboard-content">
+    <!-- Linha dos gráficos -->
+    <div class="chart-row">
+      <!-- Gráfico de Barras -->
+      <div class="chart-container">
+        <h2>Progresso por Módulo</h2>
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <!-- Gráfico de Pizza -->
+      <div class="chart-container">
+        <h2>Conclusão Geral do Curso</h2>
+        <canvas id="pieChart"></canvas>
+      </div>
+
+      <!-- Gráfico de Linha -->
+      <div class="chart-container">
+        <h2>Ritmo de Estudo Semanal</h2>
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Estatísticas Rápidas -->
+    <div class="quick-stats">
+      <h2>Estatísticas</h2>
+      <p>Total de Horas Estudadas: <strong>15h</strong></p>
+      <p>Quizzes Completados: <strong>6</strong></p>
+      <p>Nota Média nos Quizzes: <strong>87%</strong></p>
+    </div>
+
+    <div class="action-buttons">
+      <a href="perfil.html" class="btn">Continuar Curso</a>
+      <a href="certificado.html" class="btn">Ver Certificado</a>
+    </div>
+  </section>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

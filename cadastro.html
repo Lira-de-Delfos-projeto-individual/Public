@@ -6,48 +6,6 @@
   <title>Cadastro - Lira de Delfos</title>
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/styleCadastro.css">
-  
-  <script>
-    // Função para validar o formulário
-    function validarCadastro(event) {
-      // Impede o envio real do formulário para testes (você pode remover se for enviar para um servidor)
-      event.preventDefault();
-
-      var email = document.getElementById('email').value;
-      var senha = document.getElementById('senha').value;
-      var confirmaSenha = document.getElementById('confirma-senha').value;
-
-      // Validação de e-mail
-      if (!email.endsWith('.com')) {
-        alert('O e-mail deve terminar com ".com".');
-        return;
-      }
-
-      // Validação da senha (mínimo de 8 caracteres)
-      if (senha.length < 8) {
-        alert('A senha deve ter no mínimo 8 caracteres.');
-        return;
-      }
-
-      // Validação de confirmação de senha
-      if (senha !== confirmaSenha) {
-        alert('As senhas não coincidem.');
-        return;
-      }
-
-      // Se todas as validações passarem, mostra a mensagem de sucesso
-      var mensagemSucesso = document.createElement('div');
-      mensagemSucesso.classList.add('mensagem-sucesso');
-      mensagemSucesso.innerHTML = 'Cadastro feito com sucesso!';
-      
-      // Encontrar o contêiner do formulário e adicionar a mensagem após o formulário
-      var formContainer = document.querySelector('.cadastro-column');
-      formContainer.appendChild(mensagemSucesso);
-      
-      // Você pode também limpar os campos, se necessário
-      document.querySelector('.cadastro-form').reset();
-    }
-  </script>
 </head>
 <body>
   <!-- Cabeçalho -->
@@ -120,3 +78,46 @@
 
 </body>
 </html>
+
+<script>
+  // Função para validar o formulário
+  function validarCadastro(event) {
+    // Impede o envio real do formulário para testes (você pode remover se for enviar para um servidor)
+    event.preventDefault();
+
+    var email = document.getElementById('email').value;
+    var senha = document.getElementById('senha').value;
+    var confirmaSenha = document.getElementById('confirma-senha').value;
+
+    // Validação de e-mail
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailRegex.test(email)) {
+      alert('Por favor, insira um e-mail válido.');
+      return;
+    }
+
+    // Validação da senha (mínimo de 8 caracteres)
+    if (senha.length < 8) {
+      alert('A senha deve ter no mínimo 8 caracteres.');
+      return;
+    }
+
+    // Validação de confirmação de senha
+    if (senha !== confirmaSenha) {
+      alert('As senhas não coincidem.');
+      return;
+    }
+
+    // Criando a mensagem de sucesso
+    var mensagemSucesso = document.createElement('div');
+    mensagemSucesso.classList.add('mensagem-sucesso');
+    mensagemSucesso.innerHTML = 'Cadastro realizado com sucesso!';
+
+    // Encontrando o contêiner do formulário para adicionar a mensagem
+    var formContainer = document.querySelector('.cadastro-column');
+    formContainer.appendChild(mensagemSucesso);
+
+    // Limpando os campos do formulário
+    document.querySelector('.cadastro-form').reset();
+  }
+</script>
